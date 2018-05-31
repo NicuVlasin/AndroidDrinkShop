@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">AndroidDrinkShop</string>
+
+
     <string name="Continue">Continue</string>
+    <string name="Register">Register</string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_birthdate">YYYY-MM-DD</string>
+
+    <string name="FACEBOOK_APP_ID">999081856934983</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">36f31737ca9d4d8a9794db2b1612daa7</string>
 </resources>
