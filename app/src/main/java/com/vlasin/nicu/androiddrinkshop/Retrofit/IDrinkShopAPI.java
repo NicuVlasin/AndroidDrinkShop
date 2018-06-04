@@ -1,6 +1,7 @@
 package com.vlasin.nicu.androiddrinkshop.Retrofit;
 
 import com.vlasin.nicu.androiddrinkshop.Model.Banner;
+import com.vlasin.nicu.androiddrinkshop.Model.Category;
 import com.vlasin.nicu.androiddrinkshop.Model.CheckUserResponse;
 import com.vlasin.nicu.androiddrinkshop.Model.User;
 
@@ -31,4 +32,7 @@ public interface IDrinkShopAPI {
 
     @GET("getbanner.php")
     Observable<List<Banner>> getBanners();
+
+    @GET("getmenu.php")
+    Observable<List<Category>> getMenu();
 }
