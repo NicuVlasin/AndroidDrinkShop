@@ -3,6 +3,7 @@ package com.vlasin.nicu.androiddrinkshop.Retrofit;
 import com.vlasin.nicu.androiddrinkshop.Model.Banner;
 import com.vlasin.nicu.androiddrinkshop.Model.Category;
 import com.vlasin.nicu.androiddrinkshop.Model.CheckUserResponse;
+import com.vlasin.nicu.androiddrinkshop.Model.Drink;
 import com.vlasin.nicu.androiddrinkshop.Model.User;
 
 import java.util.List;
@@ -25,6 +26,10 @@ public interface IDrinkShopAPI {
                                @Field("name") String name,
                                @Field("address") String address,
                                @Field("birthdate") String birthdate);
+
+    @FormUrlEncoded
+    @POST("getdrink.php")
+    Observable<List<Drink>> getDrink(@Field("menuid") String menuID);
 
     @FormUrlEncoded
     @POST("getuser.php")

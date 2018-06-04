@@ -21,4 +21,7 @@
 
     <string name="popular">OUR POPULAR PRODUCTS</string>
     <string name="Milk_Tea">Milk Tea</string>
+    <string name="original_tea">Original Tea</string>
+    <string name="price">Price</string>
+
 </resources>
