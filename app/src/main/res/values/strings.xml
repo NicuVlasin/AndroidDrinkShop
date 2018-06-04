@@ -23,5 +23,16 @@
     <string name="Milk_Tea">Milk Tea</string>
     <string name="original_tea">Original Tea</string>
     <string name="price">Price</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="Comment">Comment</string>
+    <string name="size">Choose Size</string>
+    <string name="sugar">Sugar Level</string>
+    <string name="ice">Ice</string>
+    <string name="required">REQUIRED</string>
+    <string name="size_m">Size M</string>
+    <string name="size_l">Size L</string>
+
+
+
 
 </resources>
