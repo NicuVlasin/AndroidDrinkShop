@@ -22,6 +22,7 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.vlasin.nicu.androiddrinkshop.Adapter.CategoryAdapter;
 import com.vlasin.nicu.androiddrinkshop.Model.Banner;
 import com.vlasin.nicu.androiddrinkshop.Model.Category;
+import com.vlasin.nicu.androiddrinkshop.Model.Drink;
 import com.vlasin.nicu.androiddrinkshop.Retrofit.IDrinkShopAPI;
 import com.vlasin.nicu.androiddrinkshop.Utils.Common;
 
@@ -93,6 +94,21 @@ public class HomeActivity extends AppCompatActivity
 
         //Get Menu
         getMenu();
+
+        //SAve new Topping List
+        getToppingList();
+    }
+
+    private void getToppingList() {
+        compositeDisposable.add(mService.getDrink(Common.TOPPING_MENU_ID)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<List<Drink>>() {
+                    @Override
+                    public void accept(List<Drink> drinks) throws Exception {
+                        Common.toppingList = drinks;
+                    }
+                }));
     }
 
     private void getMenu() {
