@@ -20,6 +20,9 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.vlasin.nicu.androiddrinkshop.Adapter.CategoryAdapter;
+import com.vlasin.nicu.androiddrinkshop.Database.DataSource.CartRepository;
+import com.vlasin.nicu.androiddrinkshop.Database.Local.CartDataSource;
+import com.vlasin.nicu.androiddrinkshop.Database.Local.CartDatabase;
 import com.vlasin.nicu.androiddrinkshop.Model.Banner;
 import com.vlasin.nicu.androiddrinkshop.Model.Category;
 import com.vlasin.nicu.androiddrinkshop.Model.Drink;
@@ -97,6 +100,14 @@ public class HomeActivity extends AppCompatActivity
 
         //SAve new Topping List
         getToppingList();
+
+        //Init Database
+        initDB();
+    }
+
+    private void initDB() {
+        Common.cartDatabase = CartDatabase.getInstance(this);
+        Common.cartRepository = CartRepository.getInstance(CartDataSource.getInstance(Common.cartDatabase.cartDAO()));
     }
 
     private void getToppingList() {

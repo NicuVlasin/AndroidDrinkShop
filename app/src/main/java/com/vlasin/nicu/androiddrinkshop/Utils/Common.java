@@ -1,5 +1,7 @@
 package com.vlasin.nicu.androiddrinkshop.Utils;
 
+import com.vlasin.nicu.androiddrinkshop.Database.DataSource.CartRepository;
+import com.vlasin.nicu.androiddrinkshop.Database.Local.CartDatabase;
 import com.vlasin.nicu.androiddrinkshop.Model.Category;
 import com.vlasin.nicu.androiddrinkshop.Model.Drink;
 import com.vlasin.nicu.androiddrinkshop.Model.User;
@@ -26,6 +28,10 @@ public class Common {
     public static int sizeOfCup = -1;
     public static int sugar = -1;
     public static int ice = -1;
+
+    //Database
+    public static CartDatabase cartDatabase;
+    public static CartRepository cartRepository;
 
     public static IDrinkShopAPI getAPI()
     {
